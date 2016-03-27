@@ -1,0 +1,11 @@
+# Scrape the three demo service instances every 5 seconds.
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'demo'
+    target_groups:
+      - targets:
+        - 'localhost:8080'
+        - 'localhost:8081'
+        - 'localhost:8082'
